@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipe Book</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/Stylesheets/main.css">
+    </head>
+    <body>
+        <!-- Are We Logged In?-->
+        <% if (currentUser){ %>
+            <!-- Header Image -->
+            <div class="container-fluid container-header overflow-hidden">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="" class="float-left header-image" alt="">
+                    </div>
+                    <div class="col-sm-6 header-center">
+                        <p>
+                            <span class="big-letter">R</span>ecipe <span class="big-letter">B</span>ook
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="" class="float-right header-image" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- NavBar -->
+            <ul class="nav nav-pills nav-fill navbar-main">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Notifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/logout">Log Out</a>
+                </li>
+            </ul>
+        <% } %>

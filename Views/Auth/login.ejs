@@ -1,0 +1,20 @@
+<%- include('../Partials/header') %>
+
+<div class="vertical-center">
+    <div class="container-fluid-content container-content login">   
+        <form action="/auth/login" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="username">
+            <br>
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="password">
+            <br>
+            <input type="submit" value="Login!">
+        </form>
+    
+        <a href="#">Forgot Password</a><br>
+        <a href="/auth/Register">Register</a><br>
+    </div>
+</div>
+
+<%- include('../Partials/footer') %>

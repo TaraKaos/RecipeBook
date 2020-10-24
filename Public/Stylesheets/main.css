@@ -1,0 +1,77 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('/Images/landing.jpg');
+    height: 100%;
+}
+
+.container-header {
+    background: black;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.header-center p {
+    font-family: 'Ruthie', cursive;
+    font-size: 600%;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: blue;
+    text-align: center;
+}
+
+.login {
+    background: black;
+    margin: auto;
+    width: 25%;
+    min-height: 30%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: blue;   
+}
+
+.vertical-center {
+    min-height: 60%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 60vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+}
+
+.navbar-main {
+    background-color: black;
+}
+
+.navbar-main .navbar-brand,
+.navbar-main .navbar-text,
+.navbar-main .nav-link {
+    color: red;
+}
+
+.navbar-main .nav-link:hover {
+    color: yellow;
+}
+
+.recipes {
+    padding-top: 20px;
+    background: black;
+    overflow: auto;
+    margin-bottom: 0%;
+    min-height: 76.1%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: black;
+    color: blue;
+}
