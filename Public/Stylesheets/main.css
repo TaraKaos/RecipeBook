@@ -114,7 +114,8 @@ footer {
 }
 
 .title-center {
-    color: red;
+    color: #007BFF;
+    font-weight: bold;
     margin: auto;
 }
 
