@@ -44,7 +44,7 @@ router.post("/recipes", middleware.isLoggedIn, function(req, res)
 });
 
 //Show
-router.get("/recipes/:id", function(req, res)
+router.get("/recipes/:id", middleware.isLoggedIn, function(req, res)
 {
     //find the recipe with provided ID
     Recipe.findOne({_id: req.params.id}, function(err, foundRecipe)
@@ -64,8 +64,43 @@ router.get("/recipes/:id", function(req, res)
 });
 
 //Edit
+router.get("/recipes/:id/edit", middleware.isLoggedIn, function(req, res)
+{
+    //find the recipe with provided ID
+    Recipe.findOne({_id: req.params.id}, function(err, foundRecipe)
+    {
+        if (err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            console.log(foundRecipe);
+
+            //render edit template with that recipe
+            res.render("./Recipes/edit", {recipe: foundRecipe});
+        }
+    });
+});
 
 //Update
+router.put("/recipes/:id", middleware.isLoggedIn, function(req, res)
+{
+    //find the recipe with provided ID
+    Recipe.findByIdAndUpdate(req.params.id, req.body.recipe, function(err, foundRecipe)
+    {
+        if (err)
+        {
+            console.log(err);
+
+            res.redirect("/");
+        }
+        else
+        {
+            res.redirect("/Recipes/" + req.params.id);
+        }
+    });
+});
 
 //Destroy
 
