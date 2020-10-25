@@ -1,0 +1,22 @@
+<%- include('../Partials/header') %>
+
+<div class="container-fluid-content recipes">
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+        <% recipes.forEach(function(recipe){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= recipe.image %>">
+                    <div class="caption">
+                        <h4><%= recipe.title %></h4>
+                    </div>
+                    <p>
+                        <a href="/Recipes/<%= recipe._id %>" class="btn btn-primary">View</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    <a class="btn btn-primary btn-lg" href="/Recipes/new">Create New Recipe</a>
+</div>
+
+<%- include('../Partials/footer') %>

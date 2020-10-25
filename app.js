@@ -8,8 +8,9 @@ var express       = require("express"),
     User          = require("./models/user");
 
 //requiring routes
-var indexRoutes = require("./routes/index"),
-    authRoutes  = require("./routes/auth");
+var indexRoutes  = require("./Routes/index"),
+    authRoutes   = require("./Routes/auth"),
+    recipeRoutes = require("./Routes/recipes");
 
 var dbURL = process.env.RECIPE_BOOK_DB_URL || "mongodb://localhost:27017/recipebook";
 var dbOptions = { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false };
@@ -45,6 +46,7 @@ app.use(function(req, res, next)
 // setup routes
 app.use(indexRoutes);
 app.use(authRoutes);
+app.use(recipeRoutes);
 
 app.listen(process.env.PORT || 3000, process.env.IP, function()
 {
