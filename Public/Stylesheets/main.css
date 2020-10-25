@@ -173,3 +173,16 @@ footer {
 .button-column {
     text-align: left;
 }
+
+.thumbnail img {
+    width: 10em;
+    height: 10em;
+}
+
+.thumbnail {
+    padding: 25px;
+}
+
+.thumbnail .caption-full {
+	padding: 9px;
+}
