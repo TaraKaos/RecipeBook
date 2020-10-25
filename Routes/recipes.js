@@ -10,7 +10,7 @@ router.get("/recipes/new", middleware.isLoggedIn, function(req, res)
 });
 
 //Create
-router.post("/Recipes", middleware.isLoggedIn, function(req, res)
+router.post("/recipes", middleware.isLoggedIn, function(req, res)
 {
     //get data from form and add it to recipes array
     var newRecipe = 
@@ -44,6 +44,24 @@ router.post("/Recipes", middleware.isLoggedIn, function(req, res)
 });
 
 //Show
+router.get("/recipes/:id", function(req, res)
+{
+    //find the recipe with provided ID
+    Recipe.findOne({_id: req.params.id}, function(err, foundRecipe)
+    {
+        if (err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            console.log(foundRecipe);
+
+            //render show template with that recipe
+            res.render("Recipes/show", {recipe: foundRecipe});
+        }
+    });
+});
 
 //Edit
 

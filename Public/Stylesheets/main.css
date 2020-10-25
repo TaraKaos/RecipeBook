@@ -91,6 +91,21 @@ footer {
     padding-left: 50px;
 }
 
+.recipe-detail {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: black;
+    overflow: auto;
+    margin-bottom: 0%;
+    height: 75%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: auto;
+}
+
 .recipe-title {
     padding-right: 25px;
     color: red;
@@ -107,4 +122,9 @@ footer {
 
 .new-recipe {
     margin: auto;
+}
+
+.img-responsive {
+    max-width: 25%;
+    max-height: 25%;
 }

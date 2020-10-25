@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<div class="container-fluid recipe-detail">
+    <div class="row justify-content-center">
+        <h4 class="recipe-title"><%= recipe.title %></h4>
+    </div>
+    <div class="row justify-content-center">
+        <img src="<%= recipe.image %>" alt="" class="img-responsive">
+    </div>
+    <div class="row justify-content-center">
+        <div class="container recipe-content">
+            <p><%= recipe.content %></p>
+        </div>
+    </div>
+    <div class="container justify-content-center">
+        <a href="/" class="post-link">HOME</a>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
