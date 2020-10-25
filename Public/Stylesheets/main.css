@@ -66,11 +66,10 @@ body {
 
 .recipes {
     padding-top: 20px;
-    background: black;
     overflow: auto;
     margin-bottom: 0%;
-    height: 75%;
-    width: 75%;
+    height: 72%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -110,7 +109,8 @@ footer {
 
 .recipe-title {
     padding-right: 25px;
-    color: red;
+    color: white;
+    font-weight: bold;
 }
 
 .title-center {
@@ -119,7 +119,10 @@ footer {
 }
 
 .new-recipe-btn {
-    margin: 50px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
 }
 
 .new-recipe {
@@ -161,4 +164,12 @@ footer {
 
 .capitalize {
     text-transform: capitalize;
+}
+
+.recipe-column {
+    text-align: right;
+}
+
+.button-column {
+    text-align: left;
 }
