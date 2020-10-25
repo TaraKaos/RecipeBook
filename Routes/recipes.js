@@ -103,5 +103,17 @@ router.put("/recipes/:id", middleware.isLoggedIn, function(req, res)
 });
 
 //Destroy
+router.delete("/recipes/:id", middleware.isLoggedIn, function(req, res)
+{
+    Recipe.findByIdAndRemove(req.params.id, function(err, recipeRemoved)
+    {
+        if (err)
+        {
+            console.log(err);
+        }
+
+        res.redirect("/");
+    });
+});
 
 module.exports = router
