@@ -25,7 +25,8 @@ body {
 
 .login-title {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
+    font-size: 400%;
 }
 
 .login {
@@ -55,7 +56,8 @@ body {
 .navbar-main .navbar-brand,
 .navbar-main .navbar-text,
 .navbar-main .nav-link {
-    color: red;
+    color: #4092F5;
+    font-size: 125%;
 }
 
 .navbar-main .nav-link:hover {
@@ -78,7 +80,7 @@ body {
 
 footer {
     background-color: black;
-    color: blue;
+    color: white;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -127,4 +129,36 @@ footer {
 .img-responsive {
     max-width: 35%;
     max-height: 35%;
+}
+
+.login-btn {
+    min-width: 100px;
+    margin: 5px;
+}
+
+.login-lbl {
+    font-size: 125%;
+}
+
+.col-login-lbl {
+    text-align: right;
+}
+
+.col-btn-left {
+    text-align: right;
+}
+
+.col-btn-right {
+    text-align: left;
+}
+
+.btn-center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.capitalize {
+    text-transform: capitalize;
 }
