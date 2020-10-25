@@ -96,6 +96,15 @@ footer {
     color: red;
 }
 
+.title-center {
+    color: red;
+    margin: auto;
+}
+
 .new-recipe-btn {
     margin: 50px;
+}
+
+.new-recipe {
+    margin: auto;
 }
