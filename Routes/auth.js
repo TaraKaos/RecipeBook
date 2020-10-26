@@ -6,7 +6,7 @@ var User = require("../Models/user");
 // Show login page
 router.get("/auth/login", function(req, res)
 {
-	res.render("Auth/login");
+	res.render("/Auth/login");
 });
 
 // handling login logic
@@ -45,7 +45,7 @@ router.post("/auth/register", function(req, res)
 // show register form
 router.get("/auth/register", function(req, res)
 {
-	res.render("Auth/register");
+	res.render("/Auth/register");
 });
 
 module.exports = router;
