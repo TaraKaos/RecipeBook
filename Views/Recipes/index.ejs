@@ -14,9 +14,9 @@
                         <h4 class="recipe-title"><%= recipe.title %></h4>
                     </div>
                     <div class="btn-group" role="group">
-                        <a href="/Recipes/<%= recipe._id %>" class="btn btn-success">View</a>
-                        <a href="/Recipes/<%= recipe._id %>/Edit" class="btn btn-primary">Edit</a>
-                        <form class="delete-form" action="/Recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+                        <a href="/recipes/<%= recipe._id %>" class="btn btn-success">View</a>
+                        <a href="/recipes/<%= recipe._id %>/Edit" class="btn btn-primary">Edit</a>
+                        <form class="delete-form" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
                             <button type="link" class="btn btn-danger">Delete</button>
                         </form>
                     </div>
@@ -26,7 +26,7 @@
     </div>
     <div class="row text-center" style="display: flex; flex-wrap: wrap;"></div>
         <div class="col-md-3 col-sm-6">
-            <a href="/Recipes/new" class="btn btn-primary btn-lg new-recipe-btn">Create New Recipe</a>
+            <a href="/recipes/new" class="btn btn-primary btn-lg new-recipe-btn">Create New Recipe</a>
         </div>
     </div>
 </div>

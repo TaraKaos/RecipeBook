@@ -1,12 +1,12 @@
 var express = require("express");
 var router = express.Router();
 var passport = require("passport");
-var User = require("../Models/user");
+var User = require("../models/user");
 
 // Show login page
 router.get("/auth/login", function(req, res)
 {
-	res.render("/Auth/login");
+	res.render("/auth/login");
 });
 
 // handling login logic
@@ -45,7 +45,7 @@ router.post("/auth/register", function(req, res)
 // show register form
 router.get("/auth/register", function(req, res)
 {
-	res.render("/Auth/register");
+	res.render("/auth/register");
 });
 
 module.exports = router;

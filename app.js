@@ -5,12 +5,12 @@ var express       = require("express"),
     passport      = require("passport"),
     LocalStrategy = require("passport-local"),
     methodOveride = require("method-override"),
-    User          = require("./Models/user");
+    User          = require("./models/user");
 
 //requiring routes
-var indexRoutes  = require("./Routes/index"),
-    authRoutes   = require("./Routes/auth"),
-    recipeRoutes = require("./Routes/recipes");
+var indexRoutes  = require("./routes/index"),
+    authRoutes   = require("./routes/auth"),
+    recipeRoutes = require("./routes/recipes");
 
 var dbURL = process.env.RECIPE_BOOK_DB_URL || "mongodb://localhost:27017/recipebook";
 var dbOptions = { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false };

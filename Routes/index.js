@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
-var middleware = require("../Middleware");
-var Recipe = require("../Models/recipe");
+var middleware = require("../middleware");
+var Recipe = require("../models/recipe");
 
 //root route
 router.get("/", middleware.isLoggedIn, function(req, res)
@@ -15,7 +15,7 @@ router.get("/", middleware.isLoggedIn, function(req, res)
         }
         else
         {
-            res.render("./Recipes/index", {recipes: userRecipes});
+            res.render("./recipes/index", {recipes: userRecipes});
         }
     });
 });

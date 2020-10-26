@@ -1,12 +1,12 @@
 var express = require("express");
 var router = express.Router();
-var middleware = require("../Middleware");
-const Recipe = require("../Models/recipe");
+var middleware = require("../middleware");
+const Recipe = require("../models/recipe");
 
 //New
 router.get("/recipes/new", middleware.isLoggedIn, function(req, res)
 {
-    res.render("Recipes/new");
+    res.render("recipes/new");
 });
 
 //Create
@@ -59,7 +59,7 @@ router.get("/recipes/:id", middleware.isLoggedIn, function(req, res)
             console.log(foundRecipe);
 
             //render show template with that recipe
-            res.render("Recipes/show", {recipe: foundRecipe});
+            res.render("recipes/show", {recipe: foundRecipe});
         }
     });
 });
@@ -79,7 +79,7 @@ router.get("/recipes/:id/edit", middleware.isLoggedIn, function(req, res)
             console.log(foundRecipe);
 
             //render edit template with that recipe
-            res.render("./Recipes/edit", {recipe: foundRecipe});
+            res.render("./recipes/edit", {recipe: foundRecipe});
         }
     });
 });
@@ -98,7 +98,7 @@ router.put("/recipes/:id", middleware.isLoggedIn, function(req, res)
         }
         else
         {
-            res.redirect("/Recipes/" + req.params.id);
+            res.redirect("/recipes/" + req.params.id);
         }
     });
 });
