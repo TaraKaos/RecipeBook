@@ -8,7 +8,7 @@ middlewareObj.isLoggedIn = function(req, res, next)
 		return next();
 	}
 	
-	res.redirect("/auth/login");
+	res.redirect("/");
 }
 
 middlewareObj.getCurrentDate = function()

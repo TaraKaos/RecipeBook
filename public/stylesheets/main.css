@@ -25,6 +25,35 @@ body {
     text-align: center;
 }
 
+.landing {
+    background: black;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: blue;   
+}
+
+.landing-title {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 400%;
+    margin: auto;
+}
+
+.landing-intro {
+    color: white;
+    margin: auto;
+}
+
+.landing-buttons {
+    margin-top: 25px;
+}
+
 .login-title {
     padding-top: 50px;
     padding-bottom: 25px;

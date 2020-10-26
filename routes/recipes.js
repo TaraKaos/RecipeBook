@@ -1,7 +1,25 @@
 var express = require("express");
+const { isLoggedIn } = require("../middleware");
 var router = express.Router();
 var middleware = require("../middleware");
 const Recipe = require("../models/recipe");
+
+//Showall
+router.get("/recipes", middleware.isLoggedIn, function(req, res)
+{
+    //Get all recipes the user has created
+    Recipe.find({ author: { id: req.user._id, username: req.user.username } }, function(err, userRecipes)
+    {
+        if (err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            res.render("./recipes/index", {recipes: userRecipes});
+        }
+    });
+});
 
 //New
 router.get("/recipes/new", middleware.isLoggedIn, function(req, res)
@@ -39,7 +57,7 @@ router.post("/recipes", middleware.isLoggedIn, function(req, res)
         {
             //redirect back to recipes page
             console.log(newlyCreatedRecipe);
-            res.redirect("/");
+            res.redirect("/recipes");
         }
     });
 });
@@ -79,7 +97,7 @@ router.get("/recipes/:id/edit", middleware.isLoggedIn, function(req, res)
             console.log(foundRecipe);
 
             //render edit template with that recipe
-            res.render("./recipes/edit", {recipe: foundRecipe});
+            res.render("recipes/edit", {recipe: foundRecipe});
         }
     });
 });
@@ -113,7 +131,7 @@ router.delete("/recipes/:id", middleware.isLoggedIn, function(req, res)
             console.log(err);
         }
 
-        res.redirect("/");
+        res.redirect("/recipes");
     });
 });
 
