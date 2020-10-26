@@ -1,17 +1,18 @@
 <%- include('../partials/header.ejs') %>
 
 <div class="vertical-center">
-    <div class="container-fluid-content container-content login">
+    <div class="container-fluid login">
     	<h1 class="login-title">Register</h1>
-
-		<form action="/auth/register" method="post">
-			<label for="username">Username</label>
-            <input type="text" name="username" placeholder="username">
-            <br>
-            <label for="password">Password</label>
-            <input type="password" name="password" placeholder="password">
-            <br>
-            <input type="submit" value="Sign Up">
+        <form action="/auth/register" method="post">
+            <div class="row">
+                <input type="text" name="username" placeholder="username" class="btn-center login-input">
+            </div>
+            <div class="row">
+                <input type="password" name="password" placeholder="password" class="btn-center login-input">
+            </div>
+            <div class="row">
+                <input type="submit" class="btn btn-primary btn-center btn-register" value="Sign Up">
+            </div>
 		</form>
     </div>
 </div>

@@ -207,3 +207,7 @@ footer {
     background: white;
     margin: 25px;
 }
+
+.btn-register {
+    font-size: 150%;
+}
