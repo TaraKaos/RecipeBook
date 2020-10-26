@@ -25,7 +25,7 @@ router.get("/auth/logout", function(req, res)
 });
 
 //handle sign up logic
-router.post("./auth/register", function(req, res)
+router.post("/auth/register", function(req, res)
 {
 	var newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user)
@@ -33,7 +33,7 @@ router.post("./auth/register", function(req, res)
 		if (err)
 		{
 			console.log(err);
-			return res.render("auth/register");
+			return res.render("./auth/register");
 		}
         passport.authenticate("local")(req, res, function()
         {
