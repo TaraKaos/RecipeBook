@@ -17,9 +17,8 @@ body {
 }
 
 .header-center p {
-    font-family: cursive;
-    font-size: 600%;
-    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 500%;
     letter-spacing: 0.1em;
     color: blue;
     text-align: center;
