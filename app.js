@@ -21,7 +21,7 @@ mongoose.connect(dbURL, dbOptions)
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/Public"));
+app.use(express.static(__dirname + "/public"));
 app.use(methodOveride("_method"));
 
 // PASSPORT CONFIGURATION
