@@ -34,14 +34,18 @@ body {
 .login {
     background: black;
     margin: auto;
-    width: 50%;
-    min-height: 30%;
+    width: 60%;
+    height: 60%;
     text-align: center;
     padding-top: 0;
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
     color: blue;   
+}
+
+.login-input {
+    font-size: 150%;
 }
 
 .vertical-center {
@@ -148,6 +152,7 @@ footer {
 .login-btn {
     min-width: 100px;
     margin: 5px;
+    font-size: 150%;
 }
 
 .login-lbl {
