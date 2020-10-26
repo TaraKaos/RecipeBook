@@ -103,7 +103,7 @@ body {
     padding-top: 20px;
     overflow: auto;
     margin-bottom: 0%;
-    height: 72%;
+    height: 76.2%;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -114,6 +114,7 @@ body {
 
 footer {
     background-color: black;
+    /* font-size: 125%; */
     color: white;
     position: absolute;
     bottom: 0;
@@ -132,7 +133,7 @@ footer {
     padding-bottom: 20px;
     overflow: auto;
     margin-bottom: 0%;
-    height: 72%;
+    height: 76.2%;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -163,7 +164,7 @@ footer {
 .new-recipe {
     padding-top: 20px;
     margin-bottom: 0%;
-    height: 72%;
+    height: 76.2%;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
