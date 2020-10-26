@@ -45,7 +45,7 @@ router.post("/auth/register", function(req, res)
 // show register form
 router.get("/auth/register", function(req, res)
 {
-	res.render("/auth/register");
+	res.render("./auth/register");
 });
 
 module.exports = router;
