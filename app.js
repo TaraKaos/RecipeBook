@@ -5,7 +5,7 @@ var express       = require("express"),
     passport      = require("passport"),
     LocalStrategy = require("passport-local"),
     methodOveride = require("method-override"),
-    User          = require("./models/user");
+    User          = require("./Models/user");
 
 //requiring routes
 var indexRoutes  = require("./Routes/index"),
