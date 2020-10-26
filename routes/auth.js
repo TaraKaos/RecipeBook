@@ -6,7 +6,7 @@ var User = require("../models/user");
 // Show login page
 router.get("/auth/login", function(req, res)
 {
-	res.render("/auth/login");
+	res.render("./auth/login");
 });
 
 // handling login logic
@@ -25,7 +25,7 @@ router.get("/auth/logout", function(req, res)
 });
 
 //handle sign up logic
-router.post("/auth/register", function(req, res)
+router.post("./auth/register", function(req, res)
 {
 	var newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user)
