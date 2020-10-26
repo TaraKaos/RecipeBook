@@ -19,7 +19,8 @@ router.post("/recipes", middleware.isLoggedIn, function(req, res)
         editedDate: middleware.getCurrentDate(),
         title: req.body.title,
         image: req.body.image,
-        content: req.body.content,
+        ingredients: req.body.ingredients,
+        directions: req.body.directions,
         author: 
         {
             id: req.user._id,

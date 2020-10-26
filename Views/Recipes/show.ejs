@@ -9,11 +9,21 @@
     </div>
     <div class="row justify-content-center">
         <div class="container recipe-content">
-            <p><%- recipe.content %></p>
+            <p>
+                <b>Ingredients:</b>
+                <br>
+                <%- recipe.ingredients %>
+                <br>
+                <b>Directions:</b>
+                <br>
+                <%- recipe.directions %>
+            </p>
         </div>
     </div>
-    <div class="container justify-content-center">
-        <a href="/" class="post-link">HOME</a>
+    <div class="container justify-content-left" style="padding: 0;">
+        <a href="/">Home</a>
+        <br>
+        <br>
     </div>
 </div>
 

@@ -1,21 +1,26 @@
 <%- include('../partials/header') %>
 
-<div class="container-fluid-content container-content">
+<div class="container-fluid new-recipe">
 	<div class="row">
-        <div style="width: 30%; margin: 25px auto;">
-            <h1 style="text-align: center;">Edit <%= recipe.title %></h1>
+        <h1 class="title-center">Edit <%= recipe.title %> Recipe</h1>
+    </div>
+	<div class="row">
+        <div style="width: 50%; margin: 25px auto;">
 			<form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
 				<div class="form-group">
-					<input class="form-control" type="text" name="recipe[title]" placeholder="title" value="<%= recipe.title %>">
+					<input class="form-control" type="text" name="recipe[title]" value="<%= recipe.title %>">
 				</div>
 				<div class="form-group">
-					<input class="form-control" type="text" name="recipe[image]" placeholder="image url" value="<%= recipe.image %>">
+					<input class="form-control" type="text" name="recipe[image]" value="<%= recipe.image %>">
 				</div>
 				<div class="form-group">
-					<textarea id="content" name="recipe[content]" rows="10" cols="80"><%= recipe.content %></textarea>
+					<textarea id="ingredients" name="recipe[ingredients]" rows="10" cols="90"><%= recipe.ingredients %></textarea>
+				</div>
+                <div class="form-group">
+					<textarea id="directions" name="recipe[directions]" rows="10" cols="90"><%= recipe.directions %></textarea>
 				</div>
 				<div class="form-group">
-					<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+					<button class="btn btn-lg btn-primary btn-block">Submit!</button>	
 				</div>
 			</form>
 			<a href="/">Go Back</a>
