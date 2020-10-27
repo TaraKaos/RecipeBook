@@ -13,6 +13,7 @@ router.get("/recipes", middleware.isLoggedIn, function(req, res)
         if (err)
         {
             console.log(err);
+            req.flash("error", err.message);
         }
         else
         {
@@ -52,11 +53,14 @@ router.post("/recipes", middleware.isLoggedIn, function(req, res)
         if (err)
         {
             console.log(err);
+            req.flash("error", err.message);
+            res.redirect("/recipes");
         }
         else
         {
             //redirect back to recipes page
             console.log(newlyCreatedRecipe);
+            req.flash("success", "Created " + newlyCreatedRecipe.title + " recipe");
             res.redirect("/recipes");
         }
     });
@@ -68,9 +72,11 @@ router.get("/recipes/:id", middleware.isLoggedIn, function(req, res)
     //find the recipe with provided ID
     Recipe.findOne({_id: req.params.id}, function(err, foundRecipe)
     {
-        if (err)
+        if (err || foundRecipe == null)
         {
             console.log(err);
+            req.flash("error", "Recipe not found");
+            res.redirect("/recipes");
         }
         else
         {
@@ -88,9 +94,11 @@ router.get("/recipes/:id/edit", middleware.isLoggedIn, function(req, res)
     //find the recipe with provided ID
     Recipe.findOne({_id: req.params.id}, function(err, foundRecipe)
     {
-        if (err)
+        if (err || foundRecipe == null)
         {
             console.log(err);
+            req.flash("error", "Recipe not found");
+            res.redirect("/recipes");
         }
         else
         {
@@ -111,11 +119,12 @@ router.put("/recipes/:id", middleware.isLoggedIn, function(req, res)
         if (err)
         {
             console.log(err);
-
-            res.redirect("/");
+            req.flash("error", err.message);
+            res.redirect("/recipes");
         }
         else
         {
+            req.flash("success", "Updated " + foundRecipe.title + " recipe");
             res.redirect("/recipes/" + req.params.id);
         }
     });
@@ -129,8 +138,10 @@ router.delete("/recipes/:id", middleware.isLoggedIn, function(req, res)
         if (err)
         {
             console.log(err);
+            req.flash("error", err.message);
         }
 
+        req.flash("success", "Deleted " + recipeRemoved.title + " recipe");
         res.redirect("/recipes");
     });
 });

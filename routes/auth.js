@@ -13,14 +13,17 @@ router.get("/auth/login", function(req, res)
 router.post("/auth/login", passport.authenticate("local", 
 	{
 		successRedirect: "/recipes", 
-		failureRedirect: "/auth/login"
+		failureRedirect: "/auth/login",
+		failureFlash: true
     }), function (req, res){   
+	//TODO: Add Error Message
 });
 
 // logout route
 router.get("/auth/logout", function(req, res)
 {
 	req.logout();
+	req.flash("success", "Logged you out!");
 	res.redirect("/");
 });
 
@@ -33,10 +36,12 @@ router.post("/auth/register", function(req, res)
 		if (err)
 		{
 			console.log(err);
-			return res.render("./auth/register");
+			req.flash("error", err.message);
+			res.redirect("/auth/register");
 		}
         passport.authenticate("local")(req, res, function()
         {
+			req.flash("success", "Welcome to RecipeBook " + user.username);
 			res.redirect("/recipes");
 		});
 	});
